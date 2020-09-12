@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Slider | Feri Irawan</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="img/favicon.jpg" rel="icon" />
+  </head>
+
+  <body>
+    <section>
+      <!-- autoplau muted loop -->
+      <video id="slider" autoplay loop>
+        <source src="vid/video1.mp4" type="video/mp4" />
+      </video>
+      <ul class="navigation">
+        <li onclick="videoUrl('vid/video1.mp4')">
+          <img src="img/thumb1.jpg" />
+        </li>
+        <li onclick="videoUrl('vid/video2.mp4')">
+          <img src="img/thumb2.jpg" />
+        </li>
+        <li onclick="videoUrl('vid/video3.mp4')">
+          <img src="img/thumb3.jpg" />
+        </li>
+        <li onclick="videoUrl('vid/video4.mp4')">
+          <img src="img/thumb4.jpg" />
+        </li>
+      </ul>
+    </section>
+    <script type="text/javascript">
+      function videoUrl(video) {
+        document.getElementById("slider").src = video;
+      }
+    </script>
+  </body>
+</html>
